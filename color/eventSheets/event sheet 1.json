@@ -35,403 +35,420 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 555518276731539,
-					"parameters": {
-						"key": 65
-					}
-				},
-				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 598868995814194,
+					"sid": 248025402936532,
 					"parameters": {
 						"variable": "not_lock"
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite",
-					"sid": 606885653984141,
-					"parameters": {
-						"opacity": "50"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 606578427581445,
-					"parameters": {
-						"seconds": ".5"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite",
-					"sid": 844977189401070,
-					"parameters": {
-						"opacity": "100"
-					}
-				}
-			],
-			"sid": 791816880884138,
+			"actions": [],
+			"sid": 228532400972029,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 687248857053034,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 179131207003979,
 							"parameters": {
-								"first-value": "Array.At(check)",
-								"comparison": 1,
-								"second-value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 122784037656354,
-							"parameters": {
-								"variable": "check",
-								"value": "check+1"
+								"key": 65
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "Text3",
-							"sid": 510146276309077,
-							"parameters": {
-								"text": "\"NO\""
-							}
-						}
-					],
-					"sid": 376546708995595
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
+							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 315170194147172
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 863309039509265,
+							"sid": 917045403311800,
 							"parameters": {
-								"variable": "check",
-								"value": "check+1"
-							}
-						}
-					],
-					"sid": 673960360457033
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 924764722724541,
-					"parameters": {
-						"key": 83
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite2",
-					"sid": 741557873409074,
-					"parameters": {
-						"opacity": "50"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 815810935293919,
-					"parameters": {
-						"seconds": ".5"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite2",
-					"sid": 798351854355902,
-					"parameters": {
-						"opacity": "100"
-					}
-				}
-			],
-			"sid": 245743832381579,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 477125680947968,
-							"parameters": {
-								"first-value": "Array.At(check)",
-								"comparison": 1,
-								"second-value": "2"
+								"variable": "not_lock"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 749782591158980,
+							"id": "set-opacity",
+							"objectClass": "Sprite",
+							"sid": 404898459276877,
 							"parameters": {
-								"variable": "check",
-								"value": "check+1"
+								"opacity": "50"
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "Text3",
-							"sid": 372577758095170,
-							"parameters": {
-								"text": "\"NO\""
-							}
-						}
-					],
-					"sid": 977237684811535
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
+							"id": "wait",
 							"objectClass": "System",
-							"sid": 969859626848023
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 243809982885205,
+							"sid": 329222354349177,
 							"parameters": {
-								"variable": "check",
-								"value": "check+1"
-							}
-						}
-					],
-					"sid": 161257564421862
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 975773664221866,
-					"parameters": {
-						"key": 68
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite3",
-					"sid": 696863251136187,
-					"parameters": {
-						"opacity": "50"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 156500143475321,
-					"parameters": {
-						"seconds": ".5"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite3",
-					"sid": 268804137308703,
-					"parameters": {
-						"opacity": "100"
-					}
-				}
-			],
-			"sid": 468756889372951,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 597614882340220,
-							"parameters": {
-								"first-value": "Array.At(check)",
-								"comparison": 1,
-								"second-value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 794794745124466,
-							"parameters": {
-								"variable": "check",
-								"value": "check+1"
+								"seconds": ".5"
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "Text3",
-							"sid": 803230446453145,
+							"id": "set-opacity",
+							"objectClass": "Sprite",
+							"sid": 232415445154589,
 							"parameters": {
-								"text": "\"NO\""
+								"opacity": "100"
 							}
 						}
 					],
-					"sid": 590761193162951
+					"sid": 944986000865432,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 948359386657013,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 626479844556254,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text3",
+									"sid": 225733701485754,
+									"parameters": {
+										"text": "\"NO\""
+									}
+								}
+							],
+							"sid": 927448823064859
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 548491629301454
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 575458096185805,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 276871136509261
+						}
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 720931918092093
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 775127643627991,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 482293336516958,
 							"parameters": {
-								"variable": "check",
-								"value": "check+1"
-							}
-						}
-					],
-					"sid": 488589584673288
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 535306223389777,
-					"parameters": {
-						"key": 70
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite4",
-					"sid": 821053168512486,
-					"parameters": {
-						"opacity": "50"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 940039606470856,
-					"parameters": {
-						"seconds": ".5"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Sprite4",
-					"sid": 281185468350265,
-					"parameters": {
-						"opacity": "100"
-					}
-				}
-			],
-			"sid": 813495560470137,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 308961673928065,
-							"parameters": {
-								"first-value": "Array.At(check)",
-								"comparison": 1,
-								"second-value": "4"
+								"key": 83
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 217254525086544,
+							"id": "set-opacity",
+							"objectClass": "Sprite2",
+							"sid": 500008354908964,
 							"parameters": {
-								"variable": "check",
-								"value": "check+1"
+								"opacity": "50"
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "Text3",
-							"sid": 421027579340759,
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 482730408752488,
 							"parameters": {
-								"text": "\"NO\""
+								"seconds": ".5"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Sprite2",
+							"sid": 602398967889181,
+							"parameters": {
+								"opacity": "100"
 							}
 						}
 					],
-					"sid": 316242365663706
+					"sid": 215625574832790,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 528314581450035,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 558290496686829,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text3",
+									"sid": 635593419109060,
+									"parameters": {
+										"text": "\"NO\""
+									}
+								}
+							],
+							"sid": 939598367929910
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 443959470813296
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 478444133945362,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 441891340981002
+						}
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 694829078606432
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 597879010686324,
+							"parameters": {
+								"key": 68
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 997848059585590,
+							"id": "set-opacity",
+							"objectClass": "Sprite3",
+							"sid": 769898427142292,
 							"parameters": {
-								"variable": "check",
-								"value": "check+1"
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 264020031332860,
+							"parameters": {
+								"seconds": ".5"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Sprite3",
+							"sid": 303803522720449,
+							"parameters": {
+								"opacity": "100"
 							}
 						}
 					],
-					"sid": 260171133224456
+					"sid": 258430069182850,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 850071464584313,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 918529289315042,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text3",
+									"sid": 572030574824568,
+									"parameters": {
+										"text": "\"NO\""
+									}
+								}
+							],
+							"sid": 289804047708990
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 742404129100958
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 606370684063840,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 803319895882961
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 978395615800115,
+							"parameters": {
+								"key": 70
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Sprite4",
+							"sid": 998038373305707,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 819914076159489,
+							"parameters": {
+								"seconds": ".5"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Sprite4",
+							"sid": 930408709029214,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 720657670173644,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 854303536374761,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 269180019947681,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text3",
+									"sid": 472010797351689,
+									"parameters": {
+										"text": "\"NO\""
+									}
+								}
+							],
+							"sid": 351581342711582
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 372143699544731
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 197502354281097,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 114708159029879
+						}
+					]
 				}
 			]
 		},
@@ -640,9 +657,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 272543036736011,
+							"sid": 302882572487318,
 							"parameters": {
-								"seconds": "loop"
+								"seconds": "loop+1"
 							}
 						},
 						{
