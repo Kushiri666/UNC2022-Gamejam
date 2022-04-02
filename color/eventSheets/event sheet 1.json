@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "not_lock",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 725562785750429
+		},
+		{
+			"eventType": "variable",
 			"name": "check",
 			"type": "number",
 			"initialValue": "0",
@@ -30,6 +40,14 @@
 					"sid": 555518276731539,
 					"parameters": {
 						"key": 65
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 598868995814194,
+					"parameters": {
+						"variable": "not_lock"
 					}
 				}
 			],
@@ -613,7 +631,33 @@
 					}
 				}
 			],
-			"sid": 814763945531734
+			"sid": 814763945531734,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 272543036736011,
+							"parameters": {
+								"seconds": "loop"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 351736520095451,
+							"parameters": {
+								"variable": "not_lock",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 896399519399258
+				}
+			]
 		}
 	],
 	"sid": 342800236312872
