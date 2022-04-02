@@ -17,6 +17,16 @@ class Snail extends Phaser.Scene {
         this.correct_seq = new Array();
         this.correct_seq.push(this.colors[Math.floor(Math.random() * this.colors.length)]);
         this.tempblinker = 0;
+        this.timer = this.time.addEvent({
+          delay: 0,
+          callback: function() {this.correct_seq[0].setAlpha(1)},
+          callbackScope: this
+        });
+        this.timer = this.time.addEvent({
+          delay: 1000,
+          callback: function() {this.correct_seq[0].setAlpha(0.2)},
+          callbackScope: this
+        });
     }
 
     update() {
@@ -24,7 +34,7 @@ class Snail extends Phaser.Scene {
       this.blue.setAlpha((this.keys.D.isDown) ? 1 : 0.2);
       this.green.setAlpha((this.keys.A.isDown) ? 1 : 0.2);
       this.yellow.setAlpha((this.keys.S.isDown) ? 1 : 0.2);
-      if(this.tempblinker <= 100) {
+      /* if(this.tempblinker <= 100) {
         this.correct_seq[0].setAlpha(1);
         this.tempblinker++;
       }
@@ -33,8 +43,8 @@ class Snail extends Phaser.Scene {
         this.correct_seq[0] = this.colors[Math.floor(Math.random() * this.colors.length)];
       }
       else {
-        this.correct_seq[0].setAlpha(0);
+        this.correct_seq[0].setAlpha(0.2);
         this.tempblinker++;
-      }
+      } */
     }
   }
