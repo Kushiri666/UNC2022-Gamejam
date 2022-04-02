@@ -1,5 +1,5 @@
 {
-	"name": "Snail",
+	"name": "Snail Layout",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -411,5 +411,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "Snail Event Sheet"
 }

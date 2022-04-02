@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 28503,
-	"name": "color",
+	"name": "Parasik - The Minim",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -65,13 +65,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Snail"
+			"Snail Layout",
+			"Parasite Layout"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Snail Event Sheet",
+			"Parasite Event Sheet"
 		],
 		"subfolders": []
 	},
