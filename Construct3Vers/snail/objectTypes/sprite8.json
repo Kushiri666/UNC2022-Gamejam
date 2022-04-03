@@ -1,0 +1,127 @@
+{
+	"name": "Sprite8",
+	"plugin-id": "Sprite",
+	"sid": 680159012983875,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 683712623976662
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 441,
+						"height": 462,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\bird_up_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9884396,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 441,
+						"height": 462,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\bird_up_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6878319,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0.7792207792207793,
+								0.2562358276643991,
+								0.7077922077922078,
+								0.5,
+								0.9978354978354979,
+								0.0045351473922902496,
+								0.9935064935064936
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 2
+					},
+					{
+						"width": 441,
+						"height": 462,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\bird_up_3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 765871,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0.5995670995670995,
+								0.4308390022675737,
+								0.5411255411255411,
+								0.3922902494331066,
+								0.5,
+								0.5,
+								0.9978354978354979,
+								0.23809523809523808,
+								0.7705627705627706,
+								0.3854875283446712,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 2
+					},
+					{
+						"width": 441,
+						"height": 462,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\bird_up_4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2499417,
+						"collisionPoly": {
+							"points": [
+								0.4308390022675737,
+								0.41125541125541126,
+								0.5,
+								0.3939393939393939,
+								0.5396825396825397,
+								0.43722943722943725,
+								0.6213151927437641,
+								0.5,
+								0.6780045351473923,
+								0.6926406926406926,
+								0.5,
+								0.9978354978354979,
+								0.3673469387755102,
+								0.6471861471861472,
+								0.2925170068027211,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 2
+					}
+				],
+				"sid": 850980202774629,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			}
+		],
+		"subfolders": []
+	}
+}

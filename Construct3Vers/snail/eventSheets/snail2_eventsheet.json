@@ -1,0 +1,138 @@
+{
+	"name": "snail2_eventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "disable_control",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 268894240332905
+		},
+		{
+			"eventType": "variable",
+			"name": "v_angle",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 606704681944764
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 268433996618079
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 754408894842008,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite8",
+					"sid": 638877095079494,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 177894056183566,
+					"parameters": {
+						"seconds": ".5"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Sprite8",
+					"sid": 582487378856447,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "400"
+					}
+				},
+				{
+					"callFunction": "up and down",
+					"sid": 273461125609028
+				}
+			],
+			"sid": 276347673801456
+		},
+		{
+			"functionName": "up and down",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 339333029035332,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 559970974927934,
+							"parameters": {
+								"count": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 930896697886607,
+							"parameters": {
+								"seconds": "1.0*loopindex"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Sprite8",
+							"sid": 441388777783627,
+							"parameters": {
+								"y": "557"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 855095169085825,
+							"parameters": {
+								"seconds": ".5"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Sprite8",
+							"sid": 174736950336649,
+							"parameters": {
+								"y": "537"
+							}
+						}
+					],
+					"sid": 331704759605546
+				}
+			]
+		}
+	],
+	"sid": 359111336442912
+}
