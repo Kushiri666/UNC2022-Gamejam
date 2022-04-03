@@ -70,27 +70,19 @@
 					],
 					"actions": [
 						{
-							"id": "set-opacity",
+							"id": "set-animation-speed",
 							"objectClass": "Sprite",
-							"sid": 404898459276877,
+							"sid": 252021181196944,
 							"parameters": {
-								"opacity": "50"
+								"speed": "10"
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 329222354349177,
-							"parameters": {
-								"seconds": ".5"
-							}
-						},
-						{
-							"id": "set-opacity",
+							"id": "start-animation",
 							"objectClass": "Sprite",
-							"sid": 232415445154589,
+							"sid": 658047111673499,
 							"parameters": {
-								"opacity": "100"
+								"from": "beginning"
 							}
 						}
 					],
@@ -164,27 +156,19 @@
 					],
 					"actions": [
 						{
-							"id": "set-opacity",
+							"id": "set-animation-speed",
 							"objectClass": "Sprite2",
-							"sid": 500008354908964,
+							"sid": 540969257686292,
 							"parameters": {
-								"opacity": "50"
+								"speed": "10"
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 482730408752488,
-							"parameters": {
-								"seconds": ".5"
-							}
-						},
-						{
-							"id": "set-opacity",
+							"id": "start-animation",
 							"objectClass": "Sprite2",
-							"sid": 602398967889181,
+							"sid": 132762785753791,
 							"parameters": {
-								"opacity": "100"
+								"from": "beginning"
 							}
 						}
 					],
@@ -777,7 +761,7 @@
 			"actions": [
 				{
 					"callFunction": "next_level",
-					"sid": 462155030449058
+					"sid": 597913528709927
 				}
 			],
 			"sid": 755003713082920
