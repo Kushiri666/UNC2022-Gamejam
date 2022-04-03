@@ -1,0 +1,37 @@
+{
+	"name": "ArrowIndicator",
+	"plugin-id": "Sprite",
+	"sid": 964135918070376,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.004,
+						"originY": 0.004,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1003227,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 474225101124221,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

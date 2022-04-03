@@ -1,0 +1,86 @@
+{
+	"name": "Player",
+	"plugin-id": "Sprite",
+	"sid": 368650487020884,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "XForce",
+			"type": "number",
+			"desc": "",
+			"sid": 193412203165546
+		},
+		{
+			"name": "YForce",
+			"type": "number",
+			"desc": "",
+			"sid": 494681884074689
+		},
+		{
+			"name": "fallSpeedClamp",
+			"type": "number",
+			"desc": "",
+			"sid": 658542249773876
+		},
+		{
+			"name": "MovementSpeed",
+			"type": "number",
+			"desc": "",
+			"sid": 229762588613735
+		},
+		{
+			"name": "HasJumped",
+			"type": "boolean",
+			"desc": "",
+			"sid": 190772817117187
+		},
+		{
+			"name": "isFalling",
+			"type": "boolean",
+			"desc": "",
+			"sid": 899969091985596
+		},
+		{
+			"name": "jumpHeight",
+			"type": "number",
+			"desc": "",
+			"sid": 315802928963671
+		},
+		{
+			"name": "jumpStart",
+			"type": "number",
+			"desc": "",
+			"sid": 282972206843906
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3614019,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 666799431230970,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

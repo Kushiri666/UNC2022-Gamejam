@@ -1,35 +1,29 @@
 {
-	"name": "Sprite6",
+	"name": "Sprite2",
 	"plugin-id": "Sprite",
-	"sid": 216810026080090,
+	"sid": 434652373614870,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Pathfinding",
-			"name": "Pathfinding",
-			"sid": 365640763513566
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 100,
-						"height": 100,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9159098,
+						"imageSpriteId": 5169499,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 382532316224635,
+				"sid": 865247088960001,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
