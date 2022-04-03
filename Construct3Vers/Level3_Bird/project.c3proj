@@ -32,7 +32,12 @@
 			"Back_Hills",
 			"Player",
 			"Keyboard",
-			"Bar_Back"
+			"Bar_Back",
+			"Bar_Counter",
+			"Bar_End",
+			"Back_Start",
+			"Blackscreen",
+			"Snail"
 		],
 		"subfolders": []
 	},

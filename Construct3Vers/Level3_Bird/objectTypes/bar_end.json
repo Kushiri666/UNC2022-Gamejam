@@ -1,7 +1,7 @@
 {
-	"name": "Bar_Back",
+	"name": "Bar_End",
 	"plugin-id": "Sprite",
-	"sid": 315403915378980,
+	"sid": 518181983317013,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 1200,
+						"width": 250,
 						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2774942,
+						"imageSpriteId": 114835,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 437124602714800,
+				"sid": 465062714835059,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

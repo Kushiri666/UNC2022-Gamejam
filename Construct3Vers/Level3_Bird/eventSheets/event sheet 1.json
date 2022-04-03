@@ -29,11 +29,31 @@
 			"eventType": "variable",
 			"name": "FLOOR_LEVEL",
 			"type": "number",
-			"initialValue": "435",
+			"initialValue": "420",
 			"comment": "Lower Position Clamp",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 754823993821776
+		},
+		{
+			"eventType": "variable",
+			"name": "LEFT_CLAMP",
+			"type": "number",
+			"initialValue": "70",
+			"comment": "Left Side Boundry",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 848358923116223
+		},
+		{
+			"eventType": "variable",
+			"name": "RIGHT_CLAMP",
+			"type": "number",
+			"initialValue": "790",
+			"comment": "Right Side Boundry",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 876617832791481
 		},
 		{
 			"eventType": "comment",
@@ -61,6 +81,384 @@
 		},
 		{
 			"eventType": "comment",
+			"text": "PROGRESS MANAGEMENT ========================================"
+		},
+		{
+			"eventType": "variable",
+			"name": "START_POS",
+			"type": "number",
+			"initialValue": "360",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 456563690954744
+		},
+		{
+			"eventType": "variable",
+			"name": "END_POS",
+			"type": "number",
+			"initialValue": "494",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 932171130321044
+		},
+		{
+			"eventType": "variable",
+			"name": "PROGRESSION_RATE",
+			"type": "number",
+			"initialValue": "0.05",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 994809383292752
+		},
+		{
+			"eventType": "variable",
+			"name": "hasWon",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 418127026793879
+		},
+		{
+			"eventType": "comment",
+			"text": "Startup"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 947356330905696
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "Blackscreen",
+					"sid": 308640681067282,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "-Blackscreen.Width/2 - 10"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 763233879190472,
+					"parameters": {
+						"variable": "hasWon"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Blackscreen",
+					"sid": 803827645021604,
+					"parameters": {
+						"x": "Blackscreen.X - 10"
+					}
+				}
+			],
+			"sid": 334093706431127
+		},
+		{
+			"eventType": "comment",
+			"text": "Bar Progression"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 110139489381830
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "Bar_Counter",
+					"sid": 992585633338580,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "END_POS"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Bar_Counter",
+					"sid": 501807704098872,
+					"parameters": {
+						"x": "Bar_Counter.X + PROGRESSION_RATE"
+					}
+				}
+			],
+			"sid": 695811028225879
+		},
+		{
+			"eventType": "comment",
+			"text": "Win Condition"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 597210862757630
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "Bar_Counter",
+					"sid": 273459655123309,
+					"parameters": {
+						"comparison": 5,
+						"x-co-ordinate": "END_POS"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 193155457425906,
+					"parameters": {
+						"variable": "hasWon"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 485226874305931,
+					"parameters": {
+						"variable": "hasWon",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Blackscreen",
+					"sid": 981983967470989,
+					"parameters": {
+						"x": "1300"
+					}
+				}
+			],
+			"sid": 147807926557599
+		},
+		{
+			"eventType": "comment",
+			"text": "End Screen"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 370283301729693
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "Blackscreen",
+					"sid": 833582736608286,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "Blackscreen.Width/2"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 921409200564883,
+					"parameters": {
+						"variable": "hasWon"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Blackscreen",
+					"sid": 565447956536066,
+					"parameters": {
+						"x": "Blackscreen.X - 10"
+					}
+				}
+			],
+			"sid": 304541544304028
+		},
+		{
+			"eventType": "comment",
+			"text": "Bar Animation Loop"
+		},
+		{
+			"eventType": "variable",
+			"name": "BarTilt",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 496845505427690
+		},
+		{
+			"eventType": "variable",
+			"name": "BarLock",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 808272639457668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 799817414430372
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 331868195739091,
+					"parameters": {
+						"variable": "BarLock"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 407852440675818,
+					"parameters": {
+						"variable": "BarLock",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 407268278657649,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 730764909464744,
+							"parameters": {
+								"variable": "BarTilt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Bar_Counter",
+							"sid": 325253573356337,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 742447352301740,
+							"parameters": {
+								"variable": "BarTilt",
+								"value": "false"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 647218917639143,
+							"parameters": {
+								"seconds": "0.25"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 172681310213386,
+							"parameters": {
+								"variable": "BarLock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 587632261560630
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 227475468619751
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 197462305639671,
+							"parameters": {
+								"variable": "BarTilt"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Bar_Counter",
+							"sid": 283090332492130,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 502378715510070,
+							"parameters": {
+								"variable": "BarTilt",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 705454604940115,
+							"parameters": {
+								"seconds": "0.25"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 736715270671107,
+							"parameters": {
+								"variable": "BarLock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 181764289228922
+				}
+			]
+		},
+		{
+			"eventType": "comment",
 			"text": "Startup"
 		},
 		{
@@ -84,6 +482,460 @@
 				}
 			],
 			"sid": 417511904711533
+		},
+		{
+			"eventType": "comment",
+			"text": "SYSTEM MANAGEMENT ========================================"
+		},
+		{
+			"eventType": "variable",
+			"name": "SPAWN_TIMER",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 896562200967479
+		},
+		{
+			"eventType": "variable",
+			"name": "SpawnLock",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 229876649468754
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 236519664916170
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 616553797528798,
+					"parameters": {
+						"variable": "SpawnLock"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 932093521073122,
+					"parameters": {
+						"variable": "SpawnLock",
+						"value": "true"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 963349744891424,
+					"parameters": {
+						"object-to-create": "Snail",
+						"layer": "7",
+						"x": "937",
+						"y": "441",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 992732216487771,
+					"parameters": {
+						"seconds": "SPAWN_TIMER"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 335492251632178,
+					"parameters": {
+						"variable": "SpawnLock",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 888206370101645
+		},
+		{
+			"eventType": "comment",
+			"text": "CHARACTER BEHAVIOR ========================================"
+		},
+		{
+			"eventType": "comment",
+			"text": "Character Animation"
+		},
+		{
+			"eventType": "variable",
+			"name": "WalkLock",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 574662376498282
+		},
+		{
+			"eventType": "variable",
+			"name": "WalkSpeed",
+			"type": "number",
+			"initialValue": "0.25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 277258199699978
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 517128843353145
+				}
+			],
+			"actions": [],
+			"sid": 474603486255158,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 466073611339254,
+							"parameters": {
+								"instance-variable": "XForce",
+								"comparison": 2,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 531236986038374,
+							"parameters": {
+								"instance-variable": "XForce",
+								"comparison": 1,
+								"value": "-SCROLL_SPEED"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 272813313422200,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 805004793694694
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 641294114145610,
+							"parameters": {
+								"instance-variable": "XForce",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 712654659888011,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 443138310210542
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 443938865903169,
+							"parameters": {
+								"instance-variable": "XForce",
+								"comparison": 0,
+								"value": "-SCROLL_SPEED"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 937703058021347,
+							"parameters": {
+								"instance-variable": "isFalling"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 147591958489403,
+							"parameters": {
+								"instance-variable": "HasJumped"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Player",
+							"sid": 206487465544792,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 324623924337959
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 719988463607755
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 670202590088635,
+							"parameters": {
+								"instance-variable": "isFalling"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 381886032289043,
+							"parameters": {
+								"instance-variable": "HasJumped"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 671816599721945,
+							"parameters": {
+								"variable": "WalkLock"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 149699105286842,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 977769466764751,
+									"parameters": {
+										"instance-variable": "WalkAlt"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 521569784574412,
+									"parameters": {
+										"variable": "WalkLock",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 141237679524492,
+									"parameters": {
+										"instance-variable": "WalkAlt",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Player",
+									"sid": 104688031526463,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 597512283282036,
+									"parameters": {
+										"seconds": "WalkSpeed"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 533761716187780,
+									"parameters": {
+										"variable": "WalkLock",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 351012535148075
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 792809305954177
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 591679042309701,
+									"parameters": {
+										"variable": "WalkLock",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 600480695682689,
+									"parameters": {
+										"instance-variable": "WalkAlt",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Player",
+									"sid": 762769158486855,
+									"parameters": {
+										"frame-number": "3"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 847632695779626,
+									"parameters": {
+										"seconds": "WalkSpeed"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 703951427396319,
+									"parameters": {
+										"variable": "WalkLock",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 327746468128548
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 809579057223452
+						}
+					],
+					"actions": [],
+					"sid": 610195930117381,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 210693879347777,
+									"parameters": {
+										"instance-variable": "HasJumped"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 892415433995980,
+									"parameters": {
+										"instance-variable": "isFalling"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 992583029142799,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player",
+											"sid": 696035820916202,
+											"parameters": {
+												"instance-variable": "YForce",
+												"comparison": 1,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Player",
+											"sid": 919580709624084,
+											"parameters": {
+												"frame-number": "4"
+											}
+										}
+									],
+									"sid": 687162672110532
+								}
+							],
+							"isOrBlock": true
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "comment",
@@ -131,6 +983,40 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
+							"sid": 801533674749616,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 131436229238089,
+							"parameters": {
+								"instance-variable": "XForce",
+								"value": "Player.XForce - Player.MovementSpeed"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 873191313769116,
+							"parameters": {
+								"variable": "ADown",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 309018518148082
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
 							"sid": 975189679933273,
 							"parameters": {
 								"key": 68
@@ -160,40 +1046,6 @@
 					"sid": 257804851876875
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 204798005243742,
-							"parameters": {
-								"key": 65
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Player",
-							"sid": 330667706868715,
-							"parameters": {
-								"instance-variable": "XForce",
-								"value": "Player.XForce - Player.MovementSpeed"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 688206802398591,
-							"parameters": {
-								"variable": "ADown",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 456329316247881
-				},
-				{
 					"eventType": "comment",
 					"text": "Keyup"
 				},
@@ -203,49 +1055,7 @@
 						{
 							"id": "on-key-released",
 							"objectClass": "Keyboard",
-							"sid": 351502939071708,
-							"parameters": {
-								"key": 68
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 629823423916651,
-							"parameters": {
-								"variable": "DDown"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Player",
-							"sid": 530078120363139,
-							"parameters": {
-								"instance-variable": "XForce",
-								"value": "Player.XForce - Player.MovementSpeed"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 394834653980897,
-							"parameters": {
-								"variable": "DDown",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 781639238897868
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-released",
-							"objectClass": "Keyboard",
-							"sid": 583712190603380,
+							"sid": 314480161227156,
 							"parameters": {
 								"key": 65
 							}
@@ -253,7 +1063,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 823490940959222,
+							"sid": 501973946558018,
 							"parameters": {
 								"variable": "ADown"
 							}
@@ -263,7 +1073,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Player",
-							"sid": 108528900957132,
+							"sid": 914336102702372,
 							"parameters": {
 								"instance-variable": "XForce",
 								"value": "Player.XForce + Player.MovementSpeed"
@@ -272,14 +1082,56 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 455399717003569,
+							"sid": 517842789428649,
 							"parameters": {
 								"variable": "ADown",
 								"value": "false"
 							}
 						}
 					],
-					"sid": 317224798645129
+					"sid": 600370352631424
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 923426003557285,
+							"parameters": {
+								"key": 68
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 574050361334000,
+							"parameters": {
+								"variable": "DDown"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 467621439976769,
+							"parameters": {
+								"instance-variable": "XForce",
+								"value": "Player.XForce - Player.MovementSpeed"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 256211256607447,
+							"parameters": {
+								"variable": "DDown",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 583513087803283
 				}
 			]
 		},
@@ -338,20 +1190,20 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-y",
-							"objectClass": "Player",
-							"sid": 824697944412727,
-							"parameters": {
-								"comparison": 5,
-								"y-co-ordinate": "Player.jumpStart - Player.jumpHeight"
-							}
-						},
-						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Player",
 							"sid": 886508753251194,
 							"parameters": {
 								"instance-variable": "HasJumped"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 375843050875414,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "Player.jumpStart - Player.jumpHeight"
 							}
 						},
 						{
@@ -366,11 +1218,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-y",
+							"id": "set-instvar-value",
 							"objectClass": "Player",
-							"sid": 231608621886986,
+							"sid": 107445519802342,
 							"parameters": {
-								"y": "Player.Y - GRAVITY + 1"
+								"instance-variable": "YForce",
+								"value": "- GRAVITY + 1"
 							}
 						}
 					],
@@ -442,15 +1295,41 @@
 					],
 					"actions": [
 						{
-							"id": "set-y",
+							"id": "set-instvar-value",
 							"objectClass": "Player",
-							"sid": 986122153022098,
+							"sid": 970919888605132,
 							"parameters": {
-								"y": "Player.Y + GRAVITY"
+								"instance-variable": "YForce",
+								"value": "GRAVITY"
 							}
 						}
 					],
 					"sid": 747019003735523
+				},
+				{
+					"eventType": "comment",
+					"text": "Update Y"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 809818084201673
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Player",
+							"sid": 158420514583409,
+							"parameters": {
+								"y": "Player.Y + Player.YForce"
+							}
+						}
+					],
+					"sid": 408336918651309
 				},
 				{
 					"eventType": "comment",
@@ -522,6 +1401,14 @@
 							"parameters": {
 								"key": 32
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 327569763914292,
+							"parameters": {
+								"instance-variable": "HasJumped"
+							}
 						}
 					],
 					"actions": [
@@ -588,13 +1475,315 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "Scrolling Background"
+			"text": "Side Boundries"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Player",
+					"sid": 478844076791464,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "LEFT_CLAMP"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Player",
+					"sid": 262914341257757,
+					"parameters": {
+						"x": "LEFT_CLAMP"
+					}
+				}
+			],
+			"sid": 735017495067871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Player",
+					"sid": 705307474202842,
+					"parameters": {
+						"comparison": 5,
+						"x-co-ordinate": "RIGHT_CLAMP"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Player",
+					"sid": 388639500208240,
+					"parameters": {
+						"x": "RIGHT_CLAMP"
+					}
+				}
+			],
+			"sid": 249048747596636
+		},
+		{
+			"eventType": "comment",
+			"text": "SNAIL BEHAVIOR ========================================"
+		},
+		{
+			"eventType": "comment",
+			"text": "Snail Animation"
+		},
+		{
+			"eventType": "variable",
+			"name": "CHANGE_TIMER",
+			"type": "number",
+			"initialValue": "0.1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 442397255486463
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 534968338978824
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Snail",
+					"sid": 222438693420870,
+					"parameters": {
+						"instance-variable": "AnimLock"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Snail",
+					"sid": 968250009743895,
+					"parameters": {
+						"instance-variable": "AnimLock",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 481244098606209,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Snail",
+							"sid": 216360294270752,
+							"parameters": {
+								"instance-variable": "Frame",
+								"comparison": 2,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Snail",
+							"sid": 375694318004209,
+							"parameters": {
+								"instance-variable": "Frame",
+								"value": "Snail.Frame + 1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 589780161890714,
+							"parameters": {
+								"seconds": "CHANGE_TIMER"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Snail",
+							"sid": 401293729493674,
+							"parameters": {
+								"instance-variable": "AnimLock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 637245258827164
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 683516610345982
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Snail",
+							"sid": 909408236090519,
+							"parameters": {
+								"instance-variable": "Frame",
+								"value": "0"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 681727072908925,
+							"parameters": {
+								"seconds": "CHANGE_TIMER"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Snail",
+							"sid": 136807542492643,
+							"parameters": {
+								"instance-variable": "AnimLock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 410643296359523
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Snail Animation Update"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 910691207281562
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Snail",
+					"sid": 786805623445906,
+					"parameters": {
+						"frame-number": "Snail.Frame"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "Snail",
+					"sid": 499025003904359,
+					"parameters": {
+						"z": "6"
+					}
+				}
+			],
+			"sid": 246365636823749
+		},
+		{
+			"eventType": "comment",
+			"text": "Snail Scrolling"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 771290988731468
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Snail",
+					"sid": 458759583644411,
+					"parameters": {
+						"x": "Snail.X - SCROLL_SPEED"
+					}
+				}
+			],
+			"sid": 746890517468459
+		},
+		{
+			"eventType": "comment",
+			"text": "Snail Collision"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Snail",
+					"sid": 375528031062027,
+					"parameters": {
+						"object": "Player"
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 665152661703686
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Snail",
+					"sid": 372073293926986
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 614783858495136,
+					"parameters": {
+						"variable": "WalkSpeed",
+						"value": "0.05"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 264595505124316,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 868747019949835,
+					"parameters": {
+						"variable": "WalkSpeed",
+						"value": "0.25"
+					}
+				}
+			],
+			"sid": 778196432607378
+		},
+		{
+			"eventType": "comment",
+			"text": "SCROLLING BEHAVIOR ========================================"
 		},
 		{
 			"eventType": "variable",
 			"name": "ResetFromSky",
 			"type": "number",
-			"initialValue": "-209",
+			"initialValue": "-185",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -604,7 +1793,7 @@
 			"eventType": "variable",
 			"name": "ResetFromHills",
 			"type": "number",
-			"initialValue": "-155",
+			"initialValue": "-138",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -622,6 +1811,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "ResetToHills",
+			"type": "number",
+			"initialValue": "1117",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 815752847790055
+		},
+		{
+			"eventType": "variable",
 			"name": "ResetToSky",
 			"type": "number",
 			"initialValue": "1210",
@@ -632,16 +1831,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ResetToHills",
-			"type": "number",
-			"initialValue": "1034",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 604182487018457
-		},
-		{
-			"eventType": "variable",
 			"name": "ResetTo",
 			"type": "number",
 			"initialValue": "1290",
@@ -649,6 +1838,10 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 689147871536175
+		},
+		{
+			"eventType": "comment",
+			"text": "Background"
 		},
 		{
 			"eventType": "block",
