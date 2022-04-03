@@ -566,18 +566,6 @@
 			"sid": 614410126693085
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 661161364043615
-				}
-			],
-			"actions": [],
-			"sid": 864467235600951
-		},
-		{
 			"functionName": "play_level",
 			"functionDescription": "",
 			"functionCategory": "",
