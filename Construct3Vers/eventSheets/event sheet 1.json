@@ -53,7 +53,40 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite",
+					"sid": 848940132719237,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite4",
+					"sid": 405842714818729,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite3",
+					"sid": 713721767029366,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite2",
+					"sid": 193045398773514,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
 			"sid": 228532400972029,
 			"children": [
 				{
@@ -157,16 +190,16 @@
 					"actions": [
 						{
 							"id": "set-animation-speed",
-							"objectClass": "Sprite2",
-							"sid": 540969257686292,
+							"objectClass": "Sprite4",
+							"sid": 858327793564021,
 							"parameters": {
 								"speed": "10"
 							}
 						},
 						{
 							"id": "start-animation",
-							"objectClass": "Sprite2",
-							"sid": 132762785753791,
+							"objectClass": "Sprite4",
+							"sid": 317951528974606,
 							"parameters": {
 								"from": "beginning"
 							}
@@ -242,27 +275,19 @@
 					],
 					"actions": [
 						{
-							"id": "set-opacity",
+							"id": "set-animation-speed",
 							"objectClass": "Sprite3",
-							"sid": 769898427142292,
+							"sid": 735545540166606,
 							"parameters": {
-								"opacity": "50"
+								"speed": "10"
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 264020031332860,
-							"parameters": {
-								"seconds": ".5"
-							}
-						},
-						{
-							"id": "set-opacity",
+							"id": "start-animation",
 							"objectClass": "Sprite3",
-							"sid": 303803522720449,
+							"sid": 718152482924527,
 							"parameters": {
-								"opacity": "100"
+								"from": "beginning"
 							}
 						}
 					],
@@ -336,27 +361,19 @@
 					],
 					"actions": [
 						{
-							"id": "set-opacity",
-							"objectClass": "Sprite4",
-							"sid": 998038373305707,
+							"id": "set-animation-speed",
+							"objectClass": "Sprite2",
+							"sid": 644069474683184,
 							"parameters": {
-								"opacity": "50"
+								"speed": "10"
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 819914076159489,
+							"id": "start-animation",
+							"objectClass": "Sprite2",
+							"sid": 337788945730727,
 							"parameters": {
-								"seconds": ".5"
-							}
-						},
-						{
-							"id": "set-opacity",
-							"objectClass": "Sprite4",
-							"sid": 930408709029214,
-							"parameters": {
-								"opacity": "100"
+								"from": "beginning"
 							}
 						}
 					],
@@ -439,6 +456,15 @@
 				{
 					"callFunction": "play_level",
 					"sid": 216141900624529
+				},
+				{
+					"callFunction": "invis",
+					"sid": 152921131886781
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Sprite7",
+					"sid": 914459230014049
 				}
 			],
 			"sid": 614410126693085
@@ -505,17 +531,7 @@
 			"functionParameters": [],
 			"eventType": "function-block",
 			"conditions": [],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 970237957987995,
-					"parameters": {
-						"variable": "not_lock",
-						"value": "false"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 699093555430702,
 			"children": [
 				{
@@ -710,6 +726,27 @@
 							}
 						},
 						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 859911715423971,
+							"parameters": {
+								"variable": "not_lock",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "invis",
+							"sid": 900857299676198
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 454156247042152,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
 							"callFunction": "play_level",
 							"sid": 249959959805575
 						}
@@ -729,12 +766,11 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
+					"id": "wait",
 					"objectClass": "System",
-					"sid": 893027832473504,
+					"sid": 322512316799217,
 					"parameters": {
-						"variable": "level",
-						"value": "level+1"
+						"seconds": "1"
 					}
 				},
 				{
@@ -750,7 +786,7 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 579764036156365,
+					"sid": 977871049323319,
 					"parameters": {
 						"first-value": "level",
 						"comparison": 0,
@@ -760,11 +796,164 @@
 			],
 			"actions": [
 				{
-					"callFunction": "next_level",
-					"sid": 597913528709927
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 652342338618168,
+					"parameters": {
+						"variable": "level",
+						"value": "level+1"
+					}
 				}
 			],
-			"sid": 755003713082920
+			"sid": 755003713082920,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 196668957305028,
+							"parameters": {
+								"first-value": "level",
+								"comparison": 2,
+								"second-value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "next_level",
+							"sid": 389447421986961
+						}
+					],
+					"sid": 686989340536684
+				}
+			]
+		},
+		{
+			"functionName": "invis",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite",
+					"sid": 410983569368778,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite2",
+					"sid": 418887341137589,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite3",
+					"sid": 655784433642148,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite4",
+					"sid": 312096260388824,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 249113140388611
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 958740458095679,
+					"parameters": {
+						"first-value": "level",
+						"comparison": 0,
+						"second-value": "5"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 216086422728908
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Sprite5",
+					"sid": 487524874804184,
+					"parameters": {
+						"speed": "10"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Sprite5",
+					"sid": 129159317225969,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 251628645081505,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite7",
+					"sid": 561925730334569,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Sprite7",
+					"sid": 163453646161102,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 109780345797443,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 817943276623952,
+					"parameters": {
+						"layout": "first_test"
+					}
+				}
+			],
+			"sid": 664842234630650
 		}
 	],
 	"sid": 342800236312872
