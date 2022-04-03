@@ -8,6 +8,14 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -24,16 +32,40 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"id": "Text",
+			"name": "Text",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "Text",
-			"name": "Text",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -44,18 +76,30 @@
 		"items": [
 			"Keyboard",
 			"Array",
-			"Sprite",
-			"Sprite2",
-			"Sprite3",
-			"Sprite4",
-			"Sprite5",
 			"Text",
 			"Text2",
 			"Text3",
 			"Text4",
-			"Text5"
+			"Text5",
+			"Particles"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"HostHub",
+					"Parasite",
+					"Sprite",
+					"Sprite2",
+					"Sprite3",
+					"Sprite4",
+					"Sprite5",
+					"Sprite6",
+					"ArrowIndicator"
+				],
+				"subfolders": [],
+				"name": "Prefabs"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
