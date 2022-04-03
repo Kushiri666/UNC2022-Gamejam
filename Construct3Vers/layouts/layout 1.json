@@ -167,7 +167,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "width",
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
@@ -192,8 +192,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1489,
-						"y": 223,
+						"x": 1772,
+						"y": 11,
 						"width": 200,
 						"height": 94,
 						"originX": 0,
@@ -209,7 +209,7 @@
 					}
 				},
 				{
-					"type": "Text2",
+					"type": "loop",
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
@@ -234,9 +234,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1499,
-						"y": 460,
-						"width": 200,
+						"x": 169,
+						"y": 97,
+						"width": 97,
 						"height": 71,
 						"originX": 0,
 						"originY": 0,
@@ -318,8 +318,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1077,
-						"y": 639,
+						"x": 490,
+						"y": 7,
 						"width": 200,
 						"height": 62,
 						"originX": 0,
@@ -335,7 +335,7 @@
 					}
 				},
 				{
-					"type": "Text5",
+					"type": "check",
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
@@ -360,8 +360,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 918,
-						"y": 101,
+						"x": 314,
+						"y": 8,
 						"width": 200,
 						"height": 60,
 						"originX": 0,
@@ -377,7 +377,7 @@
 					}
 				},
 				{
-					"type": "Text6",
+					"type": "level",
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
@@ -402,10 +402,52 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1746,
-						"y": 231,
+						"x": 31,
+						"y": 8,
 						"width": 200,
 						"height": 88,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "back",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 16,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1474,
+						"y": 216,
+						"width": 200,
+						"height": 109,
 						"originX": 0,
 						"originY": 0,
 						"color": [
