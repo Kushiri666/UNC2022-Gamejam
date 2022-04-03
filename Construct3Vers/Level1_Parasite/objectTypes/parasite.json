@@ -14,6 +14,11 @@
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
 			"sid": 114289270258227
+		},
+		{
+			"behaviorId": "wrap",
+			"name": "Wrap",
+			"sid": 763280792173728
 		}
 	],
 	"effectTypes": [],
@@ -26,10 +31,70 @@
 						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "",
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_1.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7546421,
+						"imageSpriteId": 1483423,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.004
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2809346,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								0.996,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1811849,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}

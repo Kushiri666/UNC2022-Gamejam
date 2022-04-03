@@ -36,6 +36,11 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Wrap": {
+							"properties": {
+								"wrap-to": "layout"
+							}
 						}
 					},
 					"world": {
@@ -161,6 +166,51 @@
 						"height": 30,
 						"originX": 0.004,
 						"originY": 0.004,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Particles",
+					"properties": {
+						"rate": 200,
+						"spray-cone": 360,
+						"type": "one-shot",
+						"object": -1,
+						"live-preview": false,
+						"speed": 200,
+						"size": 64,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "particle-stopped",
+						"timeout": 1
+					},
+					"uid": 19,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -373,
+						"y": 857,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
