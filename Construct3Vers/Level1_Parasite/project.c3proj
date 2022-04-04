@@ -48,6 +48,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
@@ -89,7 +97,9 @@
 			"Text3",
 			"Text4",
 			"Text5",
-			"Particles"
+			"Particles",
+			"Background",
+			"Boundary"
 		],
 		"subfolders": [
 			{
@@ -117,14 +127,12 @@
 	},
 	"layouts": {
 		"items": [
-			"Snail Layout",
 			"Parasite Layout"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Snail Event Sheet",
 			"Parasite Event Sheet"
 		],
 		"subfolders": []

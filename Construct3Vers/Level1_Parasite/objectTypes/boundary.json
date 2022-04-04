@@ -1,19 +1,14 @@
 {
-	"name": "HostHub",
+	"name": "Boundary",
 	"plugin-id": "Sprite",
-	"sid": 446826484595637,
+	"sid": 570217136787464,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "LOS",
-			"name": "LineOfSight",
-			"sid": 443564551644031
-		},
-		{
 			"behaviorId": "Physics",
 			"name": "Physics",
-			"sid": 267209770780021
+			"sid": 233785581501011
 		}
 	],
 	"effectTypes": [],
@@ -26,33 +21,21 @@
 						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\inf_4.png",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 7272792,
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3999354,
+						"imageSpriteId": 8158740,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 108554153040741,
+				"sid": 267820425508853,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 0
+				"speed": 5
 			}
 		],
 		"subfolders": []

@@ -28,23 +28,23 @@
 				"frames": [
 					{
 						"width": 250,
-						"height": 250,
+						"height": 100,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_1.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1483423,
+						"imageSpriteId": 6630919,
 						"collisionPoly": {
 							"points": [
 								1,
+								0.75,
 								0,
-								1,
-								1,
+								0.75,
 								0,
+								0.25,
 								1,
-								0,
-								0.004
+								0.25
 							]
 						},
 						"useCollisionPoly": true,
@@ -52,23 +52,23 @@
 					},
 					{
 						"width": 250,
-						"height": 250,
+						"height": 100,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_2.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2809346,
+						"imageSpriteId": 7028474,
 						"collisionPoly": {
 							"points": [
 								1,
-								0,
+								0.25,
 								1,
-								1,
+								0.7499999999999991,
 								0,
-								0.996,
+								0.75,
 								0,
-								0
+								0.25
 							]
 						},
 						"useCollisionPoly": true,
@@ -76,23 +76,23 @@
 					},
 					{
 						"width": 250,
-						"height": 250,
+						"height": 100,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_3.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1811849,
+						"imageSpriteId": 3381079,
 						"collisionPoly": {
 							"points": [
 								1,
-								0,
+								0.25,
 								1,
-								1,
+								0.75,
 								0,
-								1,
+								0.75,
 								0,
-								0
+								0.25
 							]
 						},
 						"useCollisionPoly": true,
