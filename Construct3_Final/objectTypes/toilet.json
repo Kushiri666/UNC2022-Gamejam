@@ -1,0 +1,217 @@
+{
+	"name": "Toilet",
+	"plugin-id": "Sprite",
+	"sid": 348723037651442,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\tolet.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3834640,
+						"collisionPoly": {
+							"points": [
+								0.48947368421052645,
+								0.4103983093344788,
+								0.5974999999999981,
+								0.47263414284690924,
+								0.6219736842105248,
+								0.6563059674761808,
+								0.5703947368421061,
+								0.7777777777777786,
+								0.5673684210526313,
+								0.9544559065835673,
+								0.45249999999999996,
+								0.9644852783150661,
+								0.3823684210526316,
+								0.7269055806289857,
+								0.38460526315789473,
+								0.47222222222222204
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\tolet.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7367975,
+						"collisionPoly": {
+							"points": [
+								0.48947368421052645,
+								0.4103983093344788,
+								0.5974999999999981,
+								0.47263414284690924,
+								0.6219736842105248,
+								0.6563059674761808,
+								0.5703947368421061,
+								0.7777777777777786,
+								0.5673684210526313,
+								0.9544559065835673,
+								0.45249999999999996,
+								0.9644852783150661,
+								0.3823684210526316,
+								0.7269055806289857,
+								0.38460526315789473,
+								0.47222222222222204
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\tolet.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8043284,
+						"collisionPoly": {
+							"points": [
+								0.48947368421052645,
+								0.4103983093344788,
+								0.5974999999999981,
+								0.47263414284690924,
+								0.6219736842105248,
+								0.6563059674761808,
+								0.5703947368421061,
+								0.7777777777777786,
+								0.5673684210526313,
+								0.9544559065835673,
+								0.45249999999999996,
+								0.9644852783150661,
+								0.3823684210526316,
+								0.7269055806289857,
+								0.38460526315789473,
+								0.47222222222222204
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\tolet.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1646327,
+						"collisionPoly": {
+							"points": [
+								0.48947368421052645,
+								0.4103983093344788,
+								0.5974999999999981,
+								0.47263414284690924,
+								0.6219736842105248,
+								0.6563059674761808,
+								0.5703947368421061,
+								0.7777777777777786,
+								0.5673684210526313,
+								0.9544559065835673,
+								0.45249999999999996,
+								0.9644852783150661,
+								0.3823684210526316,
+								0.7269055806289857,
+								0.38460526315789473,
+								0.47222222222222204
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\tolet.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 97253,
+						"collisionPoly": {
+							"points": [
+								0.48947368421052645,
+								0.4103983093344788,
+								0.5974999999999981,
+								0.47263414284690924,
+								0.6219736842105248,
+								0.6563059674761808,
+								0.5703947368421061,
+								0.7777777777777786,
+								0.5673684210526313,
+								0.9544559065835673,
+								0.45249999999999996,
+								0.9644852783150661,
+								0.3823684210526316,
+								0.7269055806289857,
+								0.38460526315789473,
+								0.47222222222222204
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\tolet.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6490858,
+						"collisionPoly": {
+							"points": [
+								0.48947368421052645,
+								0.4103983093344788,
+								0.5974999999999981,
+								0.47263414284690924,
+								0.6219736842105248,
+								0.6563059674761808,
+								0.5703947368421061,
+								0.7777777777777786,
+								0.5673684210526313,
+								0.9544559065835673,
+								0.45249999999999996,
+								0.9644852783150661,
+								0.3823684210526316,
+								0.7269055806289857,
+								0.38460526315789473,
+								0.47222222222222204
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 719986239987545,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

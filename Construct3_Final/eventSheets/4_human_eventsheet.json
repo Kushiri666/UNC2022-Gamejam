@@ -1,0 +1,527 @@
+{
+	"name": "4_human_eventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "GoingRight",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 401194558939219
+		},
+		{
+			"eventType": "variable",
+			"name": "InBowl",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 720660439114722
+		},
+		{
+			"eventType": "variable",
+			"name": "ButtMovementSpeed",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 412083280843549
+		},
+		{
+			"eventType": "variable",
+			"name": "Maxpoops",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 727816055712084
+		},
+		{
+			"eventType": "variable",
+			"name": "CanPoop",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 757276604146031
+		},
+		{
+			"eventType": "variable",
+			"name": "MashCountNeeded",
+			"type": "number",
+			"initialValue": "30",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 870689698406677
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 646808541322405
+				}
+			],
+			"actions": [
+				{
+					"id": "set-maximum",
+					"objectClass": "PoopMeter",
+					"sid": 417722171294813,
+					"parameters": {
+						"maximum": "MashCountNeeded"
+					}
+				},
+				{
+					"id": "set-tooltip",
+					"objectClass": "PoopMeter",
+					"sid": 600147880478171,
+					"parameters": {
+						"tooltip": "\"MASH SPACE\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Butt",
+					"sid": 474262497769165,
+					"parameters": {
+						"x": "Butt.Width",
+						"y": "Butt.Height"
+					}
+				}
+			],
+			"sid": 556882535026405
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 731610068840226,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 291622333298706,
+					"parameters": {
+						"variable": "CanPoop"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 657330143288649,
+					"parameters": {
+						"object-to-create": "Poopoo",
+						"layer": "0",
+						"x": "Butt.X",
+						"y": "Butt.Y",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 455708602667218,
+					"parameters": {
+						"variable": "CanPoop",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 446970823862011,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 218432871588591,
+					"parameters": {
+						"variable": "CanPoop",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 673432794373020
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 813149450132377
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 395616549956617,
+					"parameters": {
+						"variable": "GoingRight",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 262296373809847,
+					"parameters": {
+						"first-value": "InBowl",
+						"comparison": 0,
+						"second-value": "Maxpoops"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Butt",
+					"sid": 638054748741757,
+					"parameters": {
+						"x": "Butt.X+ButtMovementSpeed",
+						"y": "Butt.Y"
+					}
+				}
+			],
+			"sid": 767095568351071,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Butt",
+							"sid": 946621148463744,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "ViewportRight(\"Layer 0\")"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 427266411323443,
+							"parameters": {
+								"variable": "GoingRight",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 552024262395007
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 677570247885581
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 143622790637168,
+					"parameters": {
+						"variable": "GoingRight",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 833674021590309,
+					"parameters": {
+						"first-value": "InBowl",
+						"comparison": 0,
+						"second-value": "Maxpoops"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Butt",
+					"sid": 254072101526689,
+					"parameters": {
+						"x": "Butt.X-ButtMovementSpeed",
+						"y": "Butt.Y"
+					}
+				}
+			],
+			"sid": 552203613586814,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Butt",
+							"sid": 114755911587641,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 719337410237608,
+							"parameters": {
+								"variable": "GoingRight",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 928110115213212
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Toilet",
+					"sid": 428655533027409,
+					"parameters": {
+						"object": "Poopoo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 263858488741652,
+					"parameters": {
+						"variable": "InBowl",
+						"value": "InBowl+1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Poopoo",
+					"sid": 474076315764759
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 708980114986963,
+					"disabled": true,
+					"parameters": {
+						"variable": "ButtMovementSpeed",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Toilet",
+					"sid": 728164224202644,
+					"parameters": {
+						"frame-number": "InBowl"
+					}
+				}
+			],
+			"sid": 845245218265355
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 484326635275663
+				}
+			],
+			"actions": [],
+			"sid": 148893111655046,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 207453025810735,
+							"parameters": {
+								"variable": "InBowl",
+								"comparison": 0,
+								"value": "Maxpoops"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 745287426067151,
+							"parameters": {
+								"variable": "CanPoop",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Butt",
+							"sid": 244437803124780,
+							"parameters": {
+								"x": "Toilet.X"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PoopMeter",
+							"sid": 640494040884992,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PoopMeterText",
+							"sid": 264527423603474,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 115262374208337
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 800220254717197,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 796813988838185,
+					"parameters": {
+						"variable": "InBowl",
+						"comparison": 0,
+						"value": "Maxpoops"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-progress",
+					"objectClass": "PoopMeter",
+					"sid": 928137939839324,
+					"parameters": {
+						"value": "PoopMeter.Progress+1"
+					}
+				}
+			],
+			"sid": 995428935513460
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-progress",
+					"objectClass": "PoopMeter",
+					"sid": 552222090504152,
+					"parameters": {
+						"comparison": 0,
+						"value": "MashCountNeeded"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PoopMeter",
+					"sid": 617762555874843
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PoopMeterText",
+					"sid": 916128196897292
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 431442283417928,
+					"parameters": {
+						"object-to-create": "ButtParticles",
+						"layer": "0",
+						"x": "Butt.X",
+						"y": "Butt.Y - 50",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 645586829149796,
+					"parameters": {
+						"object-to-create": "ParasitePooPoo",
+						"layer": "0",
+						"x": "Butt.X",
+						"y": "Butt.Y",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 326729063542335
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Toilet",
+					"sid": 988064272319086,
+					"parameters": {
+						"object": "ParasitePooPoo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ParasitePooPoo",
+					"sid": 597109774261052
+				}
+			],
+			"sid": 256825086138035
+		}
+	],
+	"sid": 828569582368203
+}

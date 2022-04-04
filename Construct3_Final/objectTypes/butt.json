@@ -1,0 +1,97 @@
+{
+	"name": "Butt",
+	"plugin-id": "Sprite",
+	"sid": 732463099368532,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 3840,
+						"height": 2160,
+						"originX": 0.09869791666666666,
+						"originY": 0.001388888888888889,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\butt_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7092951,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								1,
+								0,
+								0.5,
+								0,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 3840,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\butt_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3461557,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								0.52421875,
+								0.15416666666666667,
+								0.5,
+								0.1361111111111111,
+								0.490625,
+								0.12731481481481483
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 3840,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\butt_3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2076829,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								0.5114583333333333,
+								0.13148148148148148,
+								0.5,
+								0.12222222222222222,
+								0.49583333333333335,
+								0.11805555555555555
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 551332450387084,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
