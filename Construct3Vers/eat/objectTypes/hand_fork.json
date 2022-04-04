@@ -1,0 +1,57 @@
+{
+	"name": "hand_fork",
+	"plugin-id": "Sprite",
+	"sid": 474375923177365,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 807538845077376
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1034,
+						"height": 1900,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\hands_fork_knife.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6859786,
+						"collisionPoly": {
+							"points": [
+								0.4148936170212766,
+								0.5,
+								0.5,
+								0.9092631578947369,
+								0.7359767891682785,
+								0.9198947368421052,
+								0.31721470019342357,
+								0.5,
+								0.5,
+								0.4591578947368421
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 823122207048267,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

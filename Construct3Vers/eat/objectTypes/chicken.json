@@ -1,0 +1,57 @@
+{
+	"name": "chicken",
+	"plugin-id": "Sprite",
+	"sid": 298271743819215,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1900,
+						"height": 1034,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\chicken dinner.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2411359,
+						"collisionPoly": {
+							"points": [
+								0.27842105263157896,
+								0.511605415860735,
+								0.5,
+								0.1769825918762089,
+								0.7368421052631579,
+								0.4825918762088975,
+								0.7489473684210526,
+								0.5,
+								0.7463157894736843,
+								0.5338491295938105,
+								0.5,
+								0.9090909090909091,
+								0.2963157894736842,
+								0.45454545454545453,
+								0.2805263157894737,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 985422219468562,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

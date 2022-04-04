@@ -1,0 +1,70 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 754028270407424
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "hand_fork",
+					"sid": 507526366605055,
+					"parameters": {
+						"angle": "270"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "chicken_trans",
+					"sid": 744054360268258,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "1000"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "chicken_trans",
+					"sid": 562347768072212,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "hand_fork",
+					"sid": 795227741649453,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "300"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 879113871736496,
+					"parameters": {
+						"seconds": "4"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "hand_fork",
+					"sid": 779444490519674,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				}
+			],
+			"sid": 940180201338350
+		}
+	],
+	"sid": 506614021053835
+}
