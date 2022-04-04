@@ -1,0 +1,49 @@
+{
+	"name": "Main_Sky",
+	"plugin-id": "Sprite",
+	"sid": 185596627606635,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1590,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.44298245614035087,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5416772,
+						"collisionPoly": {
+							"points": [
+								0.0009416195856873823,
+								0,
+								0.9990583804143126,
+								0,
+								0.9990583804143126,
+								0.9912280701754386,
+								0.0009416195856873823,
+								0.9912280701754386
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 591232141446518,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,127 @@
+{
+	"name": "Sprite6",
+	"plugin-id": "Sprite",
+	"sid": 931897973577962,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "custom",
+			"name": "Custom",
+			"sid": 597014323421919
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1034,
+						"height": 1900,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\virus_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8187315,
+						"collisionPoly": {
+							"points": [
+								0.33849129593810445,
+								0.36,
+								0.9796905222437138,
+								0.5,
+								0.35106382978723405,
+								0.6463157894736842,
+								0.5,
+								0.5321052631578947,
+								0.7920696324951644,
+								0.5689473684210526,
+								0.2872340425531915,
+								0.5,
+								0.7833655705996132,
+								0.42578947368421055,
+								0.5,
+								0.46842105263157896
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1034,
+						"height": 1900,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\virus_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9609397,
+						"collisionPoly": {
+							"points": [
+								0.19922630560928434,
+								0.4357894736842105,
+								0.9777562862669246,
+								0.5,
+								0.2475822050290135,
+								0.59,
+								0.5,
+								0.5321052631578947,
+								0.7911025145067698,
+								0.5694736842105264,
+								0.2872340425531915,
+								0.5,
+								0.7833655705996132,
+								0.42578947368421055,
+								0.5,
+								0.46842105263157896
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1034,
+						"height": 1900,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\virus_3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1845075,
+						"collisionPoly": {
+							"points": [
+								0.1499032882011605,
+								0.4626315789473684,
+								0.9796905222437138,
+								0.5,
+								0.1373307543520309,
+								0.53,
+								0.5,
+								0.5321052631578947,
+								0.7920696324951644,
+								0.5689473684210526,
+								0.08994197292069628,
+								0.5,
+								0.7833655705996132,
+								0.42578947368421055,
+								0.5,
+								0.46578947368421053
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 3
+					}
+				],
+				"sid": 386281889680316,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

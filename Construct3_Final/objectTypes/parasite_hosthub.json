@@ -1,0 +1,60 @@
+{
+	"name": "Parasite_HostHub",
+	"plugin-id": "Sprite",
+	"sid": 207911761137447,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 133295828514166
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 734314253837216
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\inf_4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8983225,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4141805,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 422815323362819,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

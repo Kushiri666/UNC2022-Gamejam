@@ -1,0 +1,113 @@
+{
+	"name": "Parasite",
+	"plugin-id": "Sprite",
+	"sid": 898585489641808,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 942592470478893
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 519630062420181
+		},
+		{
+			"behaviorId": "wrap",
+			"name": "Wrap",
+			"sid": 441587334853446
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 313870,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.75,
+								0,
+								0.75,
+								0,
+								0.25,
+								1,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6766406,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.25,
+								1,
+								0.7499999999999991,
+								0,
+								0.75,
+								0,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\aeiju\\Desktop\\CS\\Parasyte - The Minim\\assets\\Sprites\\parasite_3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6671161,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.25,
+								1,
+								0.75,
+								0,
+								0.75,
+								0,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 979471531966547,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

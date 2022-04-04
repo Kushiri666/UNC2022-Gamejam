@@ -1,0 +1,137 @@
+{
+	"name": "Snail1_Bird",
+	"plugin-id": "Sprite",
+	"sid": 224333248666655,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1900,
+						"height": 1034,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\eat_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3164198,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1900,
+						"height": 1034,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\eat_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1575374,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1900,
+						"height": 1034,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\eat_3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8781255,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0.5851063829787234,
+								0.5736842105263158,
+								0.5,
+								0.621578947368421,
+								0.30464216634429403,
+								0.5,
+								0.6827852998065764,
+								0.2894736842105263,
+								0.4671179883945841,
+								0.29578947368421055,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1900,
+						"height": 1034,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\eat_4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5548181,
+						"collisionPoly": {
+							"points": [
+								0.29526315789473684,
+								0.5425531914893617,
+								0.5,
+								0,
+								0.5536842105263158,
+								0.5,
+								0.6036842105263158,
+								0.27176015473887816,
+								0.5,
+								0.7205029013539652,
+								0.2863157894736842,
+								0.47292069632495165,
+								0.29,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1900,
+						"height": 1034,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\eat_5.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7935249,
+						"collisionPoly": {
+							"points": [
+								0.2926315789473684,
+								0.5377176015473888,
+								0.5,
+								0,
+								0.5463157894736842,
+								0.5,
+								0.5994736842105263,
+								0.2640232108317215,
+								0.5,
+								0.6721470019342359,
+								0.28210526315789475,
+								0.48065764023210833,
+								0.28578947368421054,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 2
+					}
+				],
+				"sid": 339887530344308,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "Snail2_Sky",
+	"plugin-id": "Sprite",
+	"sid": 615160246225816,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1900,
+						"height": 1034,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Leo\\Desktop\\Real_Art\\sky.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7789709,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9994736842105263,
+								0,
+								0.9994736842105263,
+								0.5,
+								0.9994736842105263,
+								0.9990328820116054,
+								0.5,
+								0.9990328820116054,
+								0,
+								0.9990328820116054,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 272697341828457,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
