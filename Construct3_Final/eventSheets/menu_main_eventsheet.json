@@ -1,0 +1,117 @@
+{
+	"name": "menu_main_eventsheet",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Background Scolling"
+		},
+		{
+			"eventType": "variable",
+			"name": "MAIN_SCROLL_RATE",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 510519731800847
+		},
+		{
+			"eventType": "variable",
+			"name": "SKY_TO",
+			"type": "number",
+			"initialValue": "5144",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 227101583309594
+		},
+		{
+			"eventType": "variable",
+			"name": "SKY_FROM",
+			"type": "number",
+			"initialValue": "-1125",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 378264808087502
+		},
+		{
+			"eventType": "variable",
+			"name": "HILLS_TO",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 359152694473208
+		},
+		{
+			"eventType": "variable",
+			"name": "HILLS_FROM",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 560498646550945
+		},
+		{
+			"eventType": "variable",
+			"name": "GROUND_TO",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999911040499723
+		},
+		{
+			"eventType": "variable",
+			"name": "GROUND_FROM",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 234266731950494
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 600887141063203
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Main_Ground",
+					"sid": 608085411549875,
+					"parameters": {
+						"x": "Main_Ground.X + (MAIN_SCROLL_RATE)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Main_Forest",
+					"sid": 179162452926524,
+					"parameters": {
+						"x": "Main_Forest.X + (MAIN_SCROLL_RATE / 2)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Main_Sky",
+					"sid": 352470607718256,
+					"parameters": {
+						"x": "Main_Sky.X + (MAIN_SCROLL_RATE / 4)"
+					}
+				}
+			],
+			"sid": 838041288773831
+		}
+	],
+	"sid": 970434339623888
+}

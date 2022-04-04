@@ -1,0 +1,161 @@
+{
+	"name": "2snail2_eventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "disable_control",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 389456701759409
+		},
+		{
+			"eventType": "variable",
+			"name": "v_angle",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 493372681810626
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 831271981289183
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 971495032252395,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Snail2_Bird",
+					"sid": 813990203211689,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 107709852949007,
+					"parameters": {
+						"seconds": ".5"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Snail2_Bird",
+					"sid": 383300471462205,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "400"
+					}
+				},
+				{
+					"callFunction": "up and down",
+					"sid": 973692093291471
+				}
+			],
+			"sid": 925526909712793
+		},
+		{
+			"functionName": "up and down",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 867298174379246,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 161161906342636,
+							"parameters": {
+								"count": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 328405590966566,
+							"parameters": {
+								"seconds": "1.0*loopindex"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Snail2_Bird",
+							"sid": 811564127836823,
+							"parameters": {
+								"y": "557"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 507770307612825,
+							"parameters": {
+								"seconds": ".5"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Snail2_Bird",
+							"sid": 323361237572808,
+							"parameters": {
+								"y": "537"
+							}
+						}
+					],
+					"sid": 629957820501009
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 203057054462907,
+							"parameters": {
+								"seconds": "6"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 847035803149798,
+							"parameters": {
+								"layout": "3bird_part1"
+							}
+						}
+					],
+					"sid": 599978071611916
+				}
+			]
+		}
+	],
+	"sid": 164761903970501
+}

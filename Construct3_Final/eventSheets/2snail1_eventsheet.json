@@ -1,0 +1,1007 @@
+{
+	"name": "2Snail1_EventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "loop",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 374306813856489
+		},
+		{
+			"eventType": "variable",
+			"name": "level",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 215555082037869
+		},
+		{
+			"eventType": "variable",
+			"name": "not_lock",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 956127285112998
+		},
+		{
+			"eventType": "variable",
+			"name": "check",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 710218986035046
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 565631998909809,
+					"parameters": {
+						"variable": "not_lock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtonPink",
+					"sid": 172356604030865,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtomYellow",
+					"sid": 362713781645200,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtonGreen",
+					"sid": 882183488320113,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtonBlue",
+					"sid": 874817866665453,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 306233860972819,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 856273411915457,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "Snail1_ButtonPink",
+							"sid": 391547409051598,
+							"parameters": {
+								"speed": "10"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Snail1_ButtonPink",
+							"sid": 782411033949495,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 643150304048977,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 138178381888538,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 685940730831846,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 907336571295323,
+									"parameters": {
+										"seconds": ".2"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 638200018772775,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 642822217229731,
+									"parameters": {
+										"seconds": ".5"
+									}
+								},
+								{
+									"callFunction": "reset",
+									"sid": 374903155384311
+								}
+							],
+							"sid": 808971832005724
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 550613823223219
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 876074637211652,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 105926018699308
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 213247266202725,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "Snail1_ButtomYellow",
+							"sid": 966074206135894,
+							"parameters": {
+								"speed": "10"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Snail1_ButtomYellow",
+							"sid": 163814917954201,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 127963304706848,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 310918778593414,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 531487864898135,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 923326439995920,
+									"parameters": {
+										"seconds": ".2"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 728742277970852,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 817718563655057,
+									"parameters": {
+										"seconds": ".5"
+									}
+								},
+								{
+									"callFunction": "reset",
+									"sid": 839784473447160
+								}
+							],
+							"sid": 147030619772472
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 319828819580565
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 437327579568059,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 145354597860399
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 509286615833890,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "Snail1_ButtonGreen",
+							"sid": 262806429983544,
+							"parameters": {
+								"speed": "10"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Snail1_ButtonGreen",
+							"sid": 430850936955274,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 957891372256835,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 221865099839988,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 495775414084819,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 590244224135971,
+									"parameters": {
+										"seconds": ".2"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 279068278389249,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 941619618595669,
+									"parameters": {
+										"seconds": ".5"
+									}
+								},
+								{
+									"callFunction": "reset",
+									"sid": 618654424838591
+								}
+							],
+							"sid": 921932454574049
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 999750615630355
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 257473112513710,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 364296285408317
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 489657248001372,
+							"parameters": {
+								"key": 70
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "Snail1_ButtonBlue",
+							"sid": 854223426806218,
+							"parameters": {
+								"speed": "10"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Snail1_ButtonBlue",
+							"sid": 449349991894193,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 554143431581994,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 991635825244852,
+									"parameters": {
+										"first-value": "Array.At(check)",
+										"comparison": 1,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 303756650637021,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 996430369769424,
+									"parameters": {
+										"seconds": ".2"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Snail1_Snail",
+									"sid": 318181780853945,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 980584410122314,
+									"parameters": {
+										"seconds": ".5"
+									}
+								},
+								{
+									"callFunction": "reset",
+									"sid": 783003880280753
+								}
+							],
+							"sid": 600478095512433
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 489921807633862
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 693506729950669,
+									"parameters": {
+										"variable": "check",
+										"value": "check+1"
+									}
+								}
+							],
+							"sid": 187593103183874
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 561660651530996
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 875120196008326,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"callFunction": "play_level",
+					"sid": 399016890811047
+				},
+				{
+					"callFunction": "invis",
+					"sid": 838167841363240
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Snail1_Bird",
+					"sid": 132687397918599
+				}
+			],
+			"sid": 607711544183116
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 458627573051201
+				}
+			],
+			"actions": [],
+			"sid": 428912195574039
+		},
+		{
+			"functionName": "play_level",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 150443732124952,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 668284940622198,
+							"parameters": {
+								"count": "level"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "push",
+							"objectClass": "Array",
+							"sid": 431153183632579,
+							"parameters": {
+								"where": "back",
+								"value": "floor( random(1,5))",
+								"axis": "x"
+							}
+						}
+					],
+					"sid": 602794967387819
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 817311321926159,
+							"parameters": {
+								"count": "level"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 314831983945449,
+							"parameters": {
+								"seconds": "1*loopindex"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Snail1_Snail",
+							"sid": 250590709946508,
+							"parameters": {
+								"frame-number": "Array.At(loop)"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 734857292540438
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 909129411053679,
+							"parameters": {
+								"variable": "loop",
+								"value": "loop+1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 366449161746066,
+							"parameters": {
+								"seconds": ".5"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Snail1_Snail",
+							"sid": 596104855491654,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 251826549051801
+						}
+					],
+					"sid": 654852486102831
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 894787124507980,
+							"parameters": {
+								"seconds": "level"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 231873020801194,
+							"parameters": {
+								"variable": "not_lock",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 506096888515445
+				}
+			]
+		},
+		{
+			"functionName": "reset",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 931949006134228,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 532099014478746,
+							"parameters": {
+								"count": "level"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "pop",
+							"objectClass": "Array",
+							"sid": 549660472564993,
+							"parameters": {
+								"where": "back",
+								"axis": "x"
+							}
+						}
+					],
+					"sid": 184824647913535
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 506499254171673
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 843829887687196,
+							"parameters": {
+								"variable": "check",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 127252768671914,
+							"parameters": {
+								"variable": "loop",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 831210933266320,
+							"parameters": {
+								"variable": "not_lock",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "invis",
+							"sid": 645434724054954
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 166364453912911,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"callFunction": "play_level",
+							"sid": 173947857192298
+						}
+					],
+					"sid": 240447968573416
+				}
+			]
+		},
+		{
+			"functionName": "next_level",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 509923440514663,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"callFunction": "reset",
+					"sid": 683204879899069
+				}
+			],
+			"sid": 284296220522799
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 798027821504752,
+					"parameters": {
+						"first-value": "level",
+						"comparison": 0,
+						"second-value": "check"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 240661460165191,
+					"parameters": {
+						"variable": "level",
+						"value": "level+1"
+					}
+				}
+			],
+			"sid": 571492682567041,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 621176165954866,
+							"parameters": {
+								"first-value": "level",
+								"comparison": 2,
+								"second-value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "next_level",
+							"sid": 958084537149725
+						}
+					],
+					"sid": 113045411506147
+				}
+			]
+		},
+		{
+			"functionName": "invis",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtonPink",
+					"sid": 482711209902874,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtonBlue",
+					"sid": 918488770457346,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtonGreen",
+					"sid": 698405337668577,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_ButtomYellow",
+					"sid": 594320073165817,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 513509833756462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 600492783234613,
+					"parameters": {
+						"first-value": "level",
+						"comparison": 0,
+						"second-value": "5"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 514255350791596
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Snail1_Snail",
+					"sid": 830285875142292,
+					"parameters": {
+						"speed": "10"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Snail1_Snail",
+					"sid": 866352276310831,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 745947946550139,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Snail1_Bird",
+					"sid": 920532252075417,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Snail1_Bird",
+					"sid": 827464601029198,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 523412986078697,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 105199453787109,
+					"parameters": {
+						"layout": "2snail_part2"
+					}
+				}
+			],
+			"sid": 885929810176953
+		}
+	],
+	"sid": 690773902648078
+}

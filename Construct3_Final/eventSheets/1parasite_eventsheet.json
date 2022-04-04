@@ -1,0 +1,798 @@
+{
+	"name": "1Parasite_eventsheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "AngleDeg",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 785247170945499
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyLock",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 785790383201489
+		},
+		{
+			"eventType": "variable",
+			"name": "MaxEnemies",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 643119715807877
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentEnemies",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 631782583063065
+		},
+		{
+			"eventType": "variable",
+			"name": "GameEnd",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 361793782826944
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Startup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 432080488038351
+						}
+					],
+					"actions": [
+						{
+							"id": "set-world-gravity",
+							"objectClass": "Parasite",
+							"sid": 877949688184366,
+							"behaviorType": "Physics",
+							"parameters": {
+								"gravity": "0"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Parasite",
+							"sid": 671389560697598,
+							"parameters": {
+								"x": "random(LayoutWidth)",
+								"y": "random(LayoutHeight)"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Parasite",
+							"sid": 915987647893912,
+							"parameters": {
+								"angle": "AngleDeg"
+							}
+						},
+						{
+							"id": "enabledisable-collisions",
+							"objectClass": "Parasite",
+							"sid": 296367886510598,
+							"behaviorType": "Physics",
+							"parameters": {
+								"object": "Boundary",
+								"state": "disable"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Parasite_HostHub",
+							"sid": 681305450696777,
+							"parameters": {
+								"x": "random(ViewportLeft(\"Layer 0\")+Parasite_HostHub.Width, LayoutWidth)",
+								"y": "random(random(ViewportTop(\"Layer 0\")+Parasite_HostHub.Height, LayoutHeight))"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Parasite_HostHub",
+							"sid": 980005636380984,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 731943699670980,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 741416117584012,
+									"parameters": {
+										"count": "MaxEnemies"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 543207434404967,
+									"parameters": {
+										"object-to-create": "Enemy",
+										"layer": "0",
+										"x": "random(OriginalViewportWidth)",
+										"y": "random(OriginalViewportHeight)",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-world-gravity",
+									"objectClass": "Enemy",
+									"sid": 278885821085327,
+									"behaviorType": "Physics",
+									"parameters": {
+										"gravity": "0"
+									}
+								},
+								{
+									"id": "add-obstacle",
+									"objectClass": "Enemy",
+									"sid": 294547312881274,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"obstacle": "Parasite_HostHub"
+									}
+								},
+								{
+									"id": "add-obstacle",
+									"objectClass": "Enemy",
+									"sid": 878133611824975,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"obstacle": "Enemy"
+									}
+								},
+								{
+									"id": "find-path",
+									"objectClass": "Enemy",
+									"sid": 307946261971799,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"x": "Parasite.X",
+										"y": "Parasite.Y"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "Enemy",
+									"sid": 582933309845286,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"speed": "5"
+									}
+								}
+							],
+							"sid": 158957386032283
+						}
+					]
+				}
+			],
+			"sid": 759635694120431
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Every Frame",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 427889876532706
+						},
+						{
+							"id": "compare-velocity",
+							"objectClass": "Parasite",
+							"sid": 340715694326153,
+							"behaviorType": "Physics",
+							"parameters": {
+								"which": "overall-velocity",
+								"comparison": 4,
+								"value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 791490333804610,
+							"parameters": {
+								"variable": "KeyLock",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 167931619039544
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 579254423998544
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 297395625784947,
+							"parameters": {
+								"variable": "KeyLock",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 650969560172804
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 802649844866931,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 936265256887426,
+							"parameters": {
+								"variable": "AngleDeg",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Parasite",
+							"sid": 166155151442233,
+							"parameters": {
+								"angle": "AngleDeg"
+							}
+						}
+					],
+					"sid": 903194667680104
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 446255343190013,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 749529827244927,
+							"parameters": {
+								"variable": "AngleDeg",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Parasite",
+							"sid": 497683769758883,
+							"parameters": {
+								"angle": "AngleDeg"
+							}
+						}
+					],
+					"sid": 330210271316735
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 647232391466143,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 169498728692369,
+							"parameters": {
+								"variable": "KeyLock",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse-at-angle",
+							"objectClass": "Parasite",
+							"sid": 399967942342369,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse": "15",
+								"angle": "AngleDeg",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Parasite",
+							"sid": 697985096861672,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 214951064736222
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Parasite_HostHub",
+							"sid": 513904431930168,
+							"parameters": {
+								"object": "Parasite"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Parasite",
+							"sid": 643290459492838
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Parasite_HostHub",
+							"sid": 601484178700605,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 146287618993253,
+							"parameters": {
+								"variable": "GameEnd"
+							}
+						}
+					],
+					"sid": 682291565601024,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 208879439687500
+								}
+							],
+							"actions": [],
+							"sid": 579908097448250
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 813920417337844,
+									"parameters": {
+										"object": "Enemy"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy",
+									"sid": 211056067123642
+								}
+							],
+							"sid": 908243970565052
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 106900076943063,
+							"parameters": {
+								"variable": "GameEnd"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 358067578678304
+						}
+					],
+					"actions": [],
+					"sid": 382718129205911,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 978011652805595,
+									"parameters": {
+										"count": "50"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 819870899200096,
+									"parameters": {
+										"seconds": "loopindex*0.05"
+									}
+								},
+								{
+									"id": "set-layout-scale",
+									"objectClass": "System",
+									"sid": 595806451871521,
+									"parameters": {
+										"scale": "LayoutScale-0.01"
+									}
+								}
+							],
+							"sid": 278264105006484
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 820156523569975,
+									"parameters": {
+										"seconds": "4"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Background",
+									"sid": 336017434638407,
+									"parameters": {
+										"animation": "\"Animation 2\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-repeat-to-frame",
+									"objectClass": "Background",
+									"sid": 607706446562158,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 981283453253084,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 178040971621534,
+									"parameters": {
+										"layout": "2snail_part1"
+									}
+								}
+							],
+							"sid": 615314262218924
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 680085586398972,
+							"parameters": {
+								"first-value": "Parasite_HostHub.X - Parasite.X",
+								"comparison": 3,
+								"second-value": "300"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 438014805869624,
+							"parameters": {
+								"first-value": "Parasite_HostHub.Y - Parasite.Y",
+								"comparison": 3,
+								"second-value": "300"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-force-towards-position",
+							"objectClass": "Parasite_HostHub",
+							"sid": 831654212628291,
+							"behaviorType": "Physics",
+							"parameters": {
+								"force": "-10",
+								"x": "Parasite.X",
+								"y": "Parasite.y",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 284952152192106,
+					"isOrBlock": true
+				}
+			],
+			"sid": 499873739645343
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Behavior",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 868391043319813,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "Enemy",
+							"sid": 785392923720407,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Parasite.X",
+								"y": "Parasite.Y"
+							}
+						}
+					],
+					"sid": 950423631141580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "Enemy",
+							"sid": 805913011136514,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "Enemy",
+							"sid": 690748016624891,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 204158043905457
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-failed-to-find-path",
+							"objectClass": "Enemy",
+							"sid": 511635443445248,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "Enemy",
+							"sid": 339513665376102,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Parasite.X",
+								"y": "Parasite.Y"
+							}
+						}
+					],
+					"sid": 756843185348663
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 402694392044226,
+							"parameters": {
+								"object": "Parasite"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 185020735706205,
+							"parameters": {
+								"object-to-create": "Parasite_Particles",
+								"layer": "0",
+								"x": "Parasite.X",
+								"y": "Parasite.Y",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Parasite",
+							"sid": 288526228772436
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 158819941388115,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 773916767121501
+						}
+					],
+					"sid": 239840713069870
+				}
+			],
+			"sid": 679872627422302
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Indicator",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "Parasite_HostHub",
+							"sid": 161066643144688,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "ArrowIndicator",
+							"sid": 510102858025079,
+							"parameters": {
+								"object": "Parasite_HostHub",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ArrowIndicator",
+							"sid": 521727310744585,
+							"parameters": {
+								"x": "max(ViewportLeft(\"Layer 0\") + 50, min(ViewportRight(\"Layer 0\") - 50, ArrowIndicator.X))",
+								"y": "max(ViewportTop(\"Layer 0\") + 50, min(ViewportBottom(\"Layer 0\") - 50, ArrowIndicator.Y))\r\n"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "ArrowIndicator",
+							"sid": 183809981947482,
+							"parameters": {
+								"x": "Parasite_HostHub.X",
+								"y": "Parasite_HostHub.Y"
+							}
+						}
+					],
+					"sid": 574500594602280
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 587922547348374
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "ArrowIndicator",
+							"sid": 438598364437141,
+							"parameters": {
+								"x": "-100",
+								"y": "-100"
+							}
+						}
+					],
+					"sid": 569012233857020
+				}
+			],
+			"sid": 318064458903204
+		}
+	],
+	"sid": 717963442916842
+}
